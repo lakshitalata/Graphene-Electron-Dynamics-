@@ -1,67 +1,100 @@
-**Physics-Inspired Computational Exploration of Signal Dynamics and Conceptual Parallels to Neural Activity**
+# Modelling Attosecond Electron Dynamics in Graphene  
+### A Conceptual Proof-of-Concept Inspired by Early Neural Activity
 
-1) **What This Project Is**:-
+**Author:** LAKSHITA  
+**Status:** Independent research project (Gap Year, Post–Class 12)  
+**Field:** Ultrafast condensed matter physics • Computational modeling • Conceptual neuro-inspired analogies
 
-This is an independent, self-directed computational project I developed on my personal laptop to learn how physical systems respond to excitation, evolve over time, and lose coherence — and to reflect on how those same ideas appear, in very different ways, in biological neural signaling.
-This is not a biological model and not a peer-reviewed research paper. It is a learning-driven exploration that helped me build skills in physics-based modeling, numerical simulation, and interdisciplinary scientific thinking as preparation for undergraduate study in biology and physics.
+---
 
-2) **Why I Started This**:-
+## Overview
 
-I’m interested in biology as a study of how living systems process information. Neurons transmit signals, respond to stimuli, and lose signal strength over time — but they do so using slow, energy-consuming biological mechanisms rather than fast, coherent physical ones.
-To better understand what “signal dynamics” really means at a fundamental level, I decided to start with a simple, well-defined physical system: electrons in graphene near the Dirac point. This allowed me to focus on how excitation, oscillation, and decay emerge from mathematical models before thinking about how much more complex biological systems are.
-This project was my way of learning how scientists turn equations into simulations, and simulations into interpretations.
+This repository presents a **computational proof-of-concept** exploring whether **attosecond–femtosecond electron dynamics in graphene** can conceptually resemble the earliest stages of neural signal activity.
 
-3) **Where and How This Was Done**:- 
-All work was done independently on my personal laptop. There was no physical lab or experimental setup.
-My workflow was:
-a) Studying background material from quantum mechanics, solid-state physics, and computational neuroscience textbooks and review papers
-b)Writing simulation code in Python
-c)Running numerical experiments locally
-d)Visualizing results using plotted heatmaps and decay curves
-e)Keeping written notes on what confused me, what worked, and what I would improve
+Using a **Dirac-like Hamiltonian near the K-point** and **Gaussian wavepacket excitation**, we simulate ultrafast electron oscillations under femtosecond-scale perturbations and analyze their coherence, decay, and interference patterns.
 
-This repository documents both the technical output and my learning process.
+**Important:**  
+This work is **conceptual and analogical**. It is **not** a biological simulation and does **not** include ion channels, membranes, or actual neural mechanisms.
 
-4) **What I Actually Modeled**:-
-**Physical System**
-I modeled electrons in graphene near the Dirac (K) point using a simplified Dirac Hamiltonian. This is a standard way to describe how electrons behave like relativistic particles in graphene.
+---
 
-**Initial State**
-I represented the electron as a Gaussian wavepacket, which means I started with a localized “packet” of probability rather than a single point.
+## Methods (Summary)
 
-**Excitation**
-I simulated the effect of a short, high-energy femtosecond-scale pulse to disturb the system and observe how the wavepacket evolved afterward.
+* **Hamiltonian:** Dirac-like Hamiltonian for graphene near the K-point  
+* **Initial State:** Gaussian electron wavepacket  
+* **Excitation:** Femtosecond pulse (~2.5 eV)  
+* **Time Evolution:** Time-dependent Schrödinger equation  
+* **Numerical Method:** Split-operator Fourier method  
+* **Time Step:** 0.1 fs  
+* **Spatial Domain:** 10 nm × 10 nm (periodic boundaries)  
+* **Outputs:** Heatmaps of electron density (|Ψ|²), time-dependent oscillation curves, coherence decay
 
-**Time Evolution**
-I numerically solved the time-dependent Schrödinger equation using a split-operator Fourier method. This allowed me to step the system forward in very small time increments (fractions of a femtosecond) and observe how the wavefunction changed.
+---
 
-5) **What I Measured and Visualized**:-
-1. Electron Density Heatmaps:-
-I generated 2D heatmaps of the wavefunction magnitude (|ψ|²) to see how the electron probability distribution spread and formed interference-like patterns over time.
+## Figures
 
-2. Coherence Decay:-
-I tracked how the oscillation strength changed over time and fit the results to an exponential decay curve. This gave a characteristic coherence timescale of around 15 femtoseconds.
+**Figure 1:** Electron density heatmap |Ψ|² after excitation (~10 fs)  
+**Figure 2:** Normalized oscillation amplitude over time, showing exponential decay with characteristic coherence τ ≈ 15 fs  
+**Figure 3 (optional):** Conceptual analogy comparing graphene oscillations to early neural activity  
 
-6) **What This Taught Me About Biology**
-This project made one thing very clear to me:
-*Physical systems and biological systems operate on completely different kinds of time, energy, and mechanisms.*
+> Only **representative figures** are included. Additional exploratory figures can be found in the `Extras` folder (if included).
 
-In graphene, coherence disappears extremely fast because the system is governed by quantum dynamics. In neurons, signals persist because they are maintained by membranes, ion channels, and active biological processes that consume energy.
+---
 
-This contrast is what pushed me toward biology. I want to understand how living systems achieve reliable communication using slow, noisy, physical components — and how that differs fundamentally from the clean, mathematical systems we model in physics.
+## Interpretation & Scope
 
-7) **Limitations**
-a) This is not a neural model
-b) No ion channels, membranes, or biological mechanisms are included
-c) Many-body electron interactions in graphene are ignored
-d) Parameters are chosen for learning and visualization, not experimental accuracy
-e) There is no comparison to real experimental data
+The observed rapid excitation, oscillatory response, and transient coherence are **structurally reminiscent** of early neural signal dynamics, despite operating on vastly different timescales.
 
-This project is meant as a learning and exploration tool, not a scientific claim.
+This repository is intended to:
 
-8) **What I Want to Learn Next**
+* Demonstrate the feasibility of ultrafast coherent modeling  
+* Encourage interdisciplinary thinking  
+* Serve as a foundation for future, more rigorous work
 
-a)Spiking neuron models (Hodgkin–Huxley, Izhikevich)
-b)How electrophysiology experiments generate real neural data
-c)How computational models connect biological measurements to physical principles
-d)How biological systems maintain signal reliability despite noise and energy constraints
+---
+
+## Personal Reflection / Learning Journey
+
+This project was developed independently during my **gap year** to explore physics-based modeling and interdisciplinary scientific thinking. It helped me learn how scientists:
+
+* Turn equations into simulations  
+* Visualize results through heatmaps and temporal plots  
+* Interpret coherent dynamics conceptually  
+* Compare physical systems to biological analogs in a meaningful way
+
+This is **not a neural model**, but a learning-driven exploration to strengthen coding, visualization, and critical thinking skills.
+
+---
+
+## Limitations
+
+* This is **not a biological simulation**  
+* Ion channels, membranes, and other neural mechanisms are not modeled  
+* Many-body electron interactions in graphene are ignored  
+* Parameters are chosen for learning and visualization, **not experimental accuracy**  
+* No comparison to real experimental data
+
+---
+
+## Next Steps / Future Learning
+
+* Study spiking neuron models (Hodgkin–Huxley, Izhikevich)  
+* Explore electrophysiology experiments and real neural datasets  
+* Connect computational models to biological measurements  
+* Investigate how biological systems maintain reliable signaling despite noise and energy constraints
+
+---
+
+## Citation & Use
+
+If you use ideas, code, or figures from this repository, **please credit the author** by linking this GitHub repository.
+
+This project may later be developed into a **formal preprint or academic manuscript**.
+
+---
+
+## Disclaimer
+
+* No experimental validation claimed  
+* All results are **conceptual** and intended for learning  
+* Figures and code are **representative, not exhaustive**
